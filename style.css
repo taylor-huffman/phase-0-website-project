@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    background: #141F35;
+    /* background: #141F35; */
     margin: 0;
     font-size: 18px;
     font-weight: 300;
@@ -17,12 +17,16 @@ body {
 
 @media (min-width: 768px) {
     #hero-headline {
-        font-size: 68px;
+        font-size: 3.8em;
     }
 }
 
 .red-font {
-    color: #C7262C!important;
+    color: #C7262C;
+}
+
+.white-font {
+    color: white;
 }
 
 p#hero-subheadline {
@@ -40,15 +44,28 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
 }
 
+h2 {
+    font-size: 3rem;
+}
+
 p, button, a {
     font-family: 'Poppins', sans-serif;
     margin: 20px 0 20px;
+}
+
+li, input {
+    font-family: 'Poppins', sans-serif;
 }
 
 button {
     padding: 10px 0px;
     font-weight: 700;
     font-size: 18px;
+    transition: 100ms ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
 }
 
 button a {
@@ -57,18 +74,27 @@ button a {
 
 button.button-yellow {
     background: #FAB328;
-    border: none;
+    border-width: 0px;
     margin-right: 15px;
+}
+
+button.button-yellow a {
+    border: 4px solid #FAB328;
 }
 
 button.button-outline {
     background: transparent;
-    border-width: 4px;
+    border-width: 0px;
     padding: 6px 0px;
+}
+
+button.button-outline a {
+    border: 4px solid;
 }
 
 .container {
     padding: 40px;
+    position: relative;
 }
 
 #hero {
@@ -79,8 +105,13 @@ button.button-outline {
     padding: 100px 0 50px;
 }
 
-#hero-image {
+#hero-image, #back-story-image, #contact-image {
     width: 110%;
+}
+
+#back-story-image {
+    transform: translateX(-50px);
+    margin-top: 40px;
 }
 
 .logo {
@@ -91,6 +122,7 @@ button.button-outline {
     max-width: 1200px;
     width: 97%;
     margin: auto;
+    position: relative;
 }
 
 nav {
@@ -106,9 +138,32 @@ nav .logo {
     margin: 0 15px;
 }
 
-.row.flex {
+a.menu-item.desktop-menu-item:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0%;
+    background: #141F35;
+    position: relative;
+    transition: 100ms ease-in-out;
+    margin: auto;
+}
+
+a.menu-item.desktop-menu-item:hover:after {
+    content: '';
+    display: block;
+    width: 100%;
+    background: #141F35;
+    position: relative;
+}
+
+.flex {
     display: flex;
     flex-direction: row;
+}
+
+.flex-align-self-end {
+    align-items: self-end;
 }
 
 .column.column-two-thirds {
@@ -117,5 +172,63 @@ nav .logo {
 
 .column.column-one-third {
     width: 33%;
+}
+
+#back-story {
+    background: #F6F6F7;
+    padding: 80px 0 140px;
+}
+
+div#back-story-content {
+    max-width: 650px;
+    margin-left: auto;
+}
+
+#personal-life {
+    background: #141F35;
+    padding: 80px 0 100px;
+}
+
+div#personal-life-content {
+    max-width: 600px;
+    margin-top: 40px;
+}
+
+img#taylor-top-three {
+    position: absolute;
+    top: -263px;
+    right: 47px;
+    max-width: 350px;
+}
+
+#recent-projects {
+    background: #C7262C url(./media/th-image-background-pattern-squiggly-lines.png);
+    background-repeat: repeat;
+    background-size: 400px;
+    min-height: 800px;
+}
+
+#contact {
+    background: white;
+    padding: 80px 0 100px;
+}
+
+input {
+    width: 75%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 0;
+    border-width: 4px;
+    font-size: 18px;
+    display: block;
+}
+
+input[type="submit"] {
+    width: fit-content;
+}
+
+#footer {
+    background: #141F35;
+    min-height: 800px;
 }
 
