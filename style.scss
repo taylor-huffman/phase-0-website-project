@@ -1,0 +1,48 @@
+$dark-blue: #141F35;
+$red: #C7262C;
+$yellow: #FAB328;
+$light-gray: #F6F6F7;
+$medium-gray: #DFE0E3;
+
+body {
+    background: blue;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+
+p, button, a {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    padding: 40px;
+}
+
+#hero {
+    background: white;
+    min-height: 50vh;
+}
+
+.inner-wrap {
+    max-width: 1400px;
+    width: 97%;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
+nav .logo {
+    margin-right: auto;
+}
+
+.menu-item {
+    margin: 0 15px;
+}

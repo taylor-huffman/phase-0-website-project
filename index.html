@@ -4,11 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>My Website</title>
+    <title>Taylor Huffman - Web Developer</title>
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <section id="hero" class="container">
+        <div class="inner-wrap">
+            <header>
+                <nav class="menu flex">
+                    <img class="logo" src="./media/th-image-logo.png" alt="Taylor Huffman Logo">
+                    <a class="menu-item desktop-menu-item" href="#recent-projects">Projects</a>
+                    <a class="menu-item desktop-menu-item" href="#back-story">About</a>
+                    <a class="menu-item desktop-menu-item" href="#contact">Contact</a>
+                </nav>
+                <div class="row flex">
+                    <div class="column column-two-thirds">
+                        <h1 id="hero-headline">Custom Web Development That Helps <span class="red-font">Grow Your Business</span></h1>
+                        <p id="hero-subheadline">Let's increase your bottom line, one app at a time! But first, scroll to learn more about me, view some of my recent projects, and contact me with your project inquiry today.</p>
+                        <div class="button-block">
+                            <button class="button-yellow"><a href="#recent-projects">Projects</a></button>
+                            <button class="button-outline"><a href="#contact">Contact</a></button>
+                        </div>
+                    </div>
+                    <div class="column column-one-third">
+                        <img id="hero-image" src="./media/th-image-coding-illustration.png" alt="Coding Illustration">
+                    </div>
+                </div>
+            </header>
+        </div>
+    </section>
+    <section id="back-story" class="container"></section>
+    <section id="personal-life" class="container"></section>
+    <section id="recent-projects" class="container"></section>
+    <section id="contact" class="container"></section>
+    <section id="footer" class="container"></section>
     <script src="script.js"></script>
 </body>
 </html>
