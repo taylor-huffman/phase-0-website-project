@@ -272,7 +272,7 @@ input, textarea {
     border-color: #141F35;
 }
 
-input[type="text"], textarea {
+input[type="text"], input[type="email"], input[type="tel"], textarea {
     border-width: 4px!important;
 }
 
