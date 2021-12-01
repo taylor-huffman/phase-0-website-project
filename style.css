@@ -20,8 +20,12 @@ body {
 }
 
 @media (min-width: 768px) {
-    #hero-headline {
+    h1 {
         font-size: 3.8em;
+    }
+
+    h2 {
+        font-size: 3rem;
     }
 }
 
@@ -46,10 +50,6 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', serif;
     margin: 20px 0 20px;
     line-height: 1.1;
-}
-
-h2 {
-    font-size: 3rem;
 }
 
 p, button, a {
@@ -160,6 +160,20 @@ nav .logo {
     font-weight: 500;
 }
 
+#mobile-menu-toggle {
+    margin: 0;
+}
+
+#mobile-menu-toggle {
+    font-size: 26px;
+}
+
+@media (min-width: 901px) {
+    #mobile-menu-toggle {
+        display: none;
+    }
+}
+
 a.menu-item.desktop-menu-item:after {
     content: '';
     display: block;
@@ -184,8 +198,12 @@ a.menu-item.desktop-menu-item:hover:after {
     flex-direction: row;
 }
 
-.flex-align-self-end {
+.flex-align-flex-end {
     align-items: flex-end;
+}
+
+.flex-align-center {
+    align-items: center;
 }
 
 .column.column-two-thirds {
@@ -284,11 +302,70 @@ input[type="submit"] {
 }
 
 @media (max-width: 900px) {
+    #hero header .row {
+        padding: 50px 0 50px;
+    }
+
     .column.column-one-third, .column.column-two-thirds {
         width: 100%;
     }
 
     .flex {
         flex-direction: column;
+    }
+
+    a.menu-item.desktop-menu-item {
+        display: none;
+    }
+
+    .logo {
+        max-width: 180px;
+    }
+
+    #hero-image, #back-story-image, #contact-image {
+        width: 100%;
+    }
+
+    img#hero-image, #contact-image {
+        margin-top: 50px;
+    }
+
+    #back-story-image {
+        transform: unset;
+        margin-top: unset;
+        margin: 30px 0 40px;
+    }
+
+    div#back-story-content {
+        margin-left: unset;
+    }
+
+    img#taylor-top-three {
+        position: relative;
+        margin-top: -250px;
+        width: 100%;
+        top: unset;
+        right: unset;
+        max-width: unset;
+    }
+
+    #back-story {
+        padding: 40px 20px 220px;
+    }
+
+    #personal-life {
+        padding: 80px 20px 40px;
+    }
+
+    #recent-projects {
+        padding: 40px 20px 40px;
+    }
+
+    #contact {
+        padding: 40px 20px 60px;
+    }
+
+    input, textarea {
+        width: 100%;
     }
 }
