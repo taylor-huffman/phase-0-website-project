@@ -416,3 +416,28 @@ div#mobile-menu-container {
         width: 100%;
     }
 }
+
+#back-to-top-button {
+    position: fixed;
+    bottom: 15%;
+    right: 0;
+    background-color: #C7262C;
+    padding: 15px 0px;
+    visibility: hidden;
+    transform: translateX(51px);
+    transition: all 300ms ease-in-out;
+}
+
+#back-to-top-button a {
+    padding: 15px 20px;
+}
+
+.back-to-top-button-show {
+    transition: all 300ms ease-in-out!important;
+    transform: translateX(0)!important;
+    visibility: visible!important;
+}
+
+#back-to-top-button i {
+    color: white;
+}
