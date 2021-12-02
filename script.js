@@ -8,6 +8,10 @@ const mobileMenuContainer = document.getElementById('mobile-menu-container');
 const mobileMenuClose = document.getElementById('mobile-menu-close');
 const mobileMenu = document.getElementById('mobile-menu');
 const backToTopButton = document.getElementById('back-to-top-button');
+const viewMoreButton = document.getElementById('view-more-button');
+const viewMoreButtonA = document.querySelector('#view-more-button a');
+const recentProjectsViewMoreSection = document.getElementById('recent-projects-view-more');
+
 
 hamburgerMenu.addEventListener('click', function() {
     mobileMenuContainer.style.visibility = "visible";
@@ -21,6 +25,19 @@ mobileMenuContainer.addEventListener('click', function () {
     mobileMenuContainer.style.backgroundColor = "rgba(20 31 53 / 0%)";
     mobileMenu.classList.toggle('mobile-menu-open');
     body.style.overflow = "auto";
+});
+
+viewMoreButton.addEventListener('click', function () {
+    if (viewMoreButtonA.innerHTML == "View More") {
+        // recentProjectsViewMoreSection.scrollTo(0);
+        recentProjectsViewMoreSection.classList.add('recent-projects-view-more-show');
+        viewMoreButtonA.innerHTML = "View Less";
+        viewMoreButtonA.setAttribute("href", "#recent-projects-view-more");
+    } else {
+        recentProjectsViewMoreSection.classList.remove('recent-projects-view-more-show');
+        viewMoreButtonA.innerHTML = "View More";
+        viewMoreButtonA.setAttribute("href", "#recent-projects");
+    }
 });
 
 window.onscroll = function() {backToTop()};
