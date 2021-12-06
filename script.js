@@ -1,6 +1,56 @@
 // const h2 = document.createElement("h2");
 // h2.textContent = "This content added by Javascript";
 // document.querySelector("body").appendChild(h2);
+const recentProjects = {
+    projectName: {
+        teamImpact: {
+            url: "https://teamimpactcfa.com",
+            image: "./media/newteamimpactscreenshot.JPG",
+            description: "Team Impact Website",
+        },
+        halSutton: {
+            url: "https://offers.halsuttongolf.com",
+            image: "./media/newhalsuttonscreenshot.JPG",
+            description: "Hal Sutton Golf Website",
+        },
+        workersCompCosulting: {
+            url: "https://natef18.sg-host.com",
+            image: "./media/newworkerscompconsultingscreenshot.JPG",
+            description: "Workers Comp Consulting Website",
+        },
+        mackainPower: {
+            url: "https://mckainpower.com",
+            image: "./media/newmckainpowerscreenshot.JPG",
+            description: "Mckain Power Website",
+        },
+        clickAnElectrician: {
+            url: "https://clickanelectrician.com",
+            image: "./media/newclickanelectrician.JPG",
+            description: "Click An Electrician Website",
+        },
+        saturated: {
+            url: "https://natef19.sg-host.com",
+            image: "./media/newsaturatedscreenshot.JPG",
+            description: "Saturated Website",
+        },
+        tellusMedia: {
+            url: "https://tellus.co/webdevelopment",
+            image: "./media/newtellusscreenshot.JPG",
+            description: "Tellus Media Website",
+        },
+        republicFireBowls: {
+            url: "https://republicfirebowls.com",
+            image: "./media/newrepublicfirebowlsscreenshot.JPG",
+            description: "Republic Fire Bowls Website",
+        },
+        ktxFit: {
+            url: "https://ktxfit.com",
+            image: "./media/newktxfitscreenshot.JPG",
+            description: "KTX Fit Website",
+        },
+    }
+}
+
 
 const body = document.querySelector('body');
 const hamburgerMenu = document.getElementById('mobile-menu-toggle');
@@ -11,6 +61,8 @@ const backToTopButton = document.getElementById('back-to-top-button');
 const viewMoreButton = document.getElementById('view-more-button');
 const viewMoreButtonA = document.querySelector('#view-more-button a');
 const recentProjectsViewMoreSection = document.getElementById('recent-projects-view-more');
+const projectImage = document.getElementsByClassName('recent-project-image');
+const projectImageLightbox = document.getElementById('project-image-lightbox');
 
 
 hamburgerMenu.addEventListener('click', function() {
@@ -50,4 +102,46 @@ function backToTop() {
         // backToTopButton.style.visibility = "hidden";
         backToTopButton.classList.remove('back-to-top-button-show');
     }
+  }
+
+  for (let i = 0; i < projectImage.length; i++) {
+      let image = projectImage[i];
+      let div = document.createElement("div");
+      let icon = document.createElement("i");
+    
+    //   image.addEventListener('click', function() {
+    //       document.body.style.overflow = "hidden";
+    //       projectImageLightbox.classList.add('project-image-lightbox-show');
+    //       projectImageLightbox.appendChild(image);
+    //       image.classList.add('image-scale');
+    //       projectImageLightbox.appendChild(div);
+    //       div.classList.add('image-close-button');
+    //       div.appendChild(icon);
+    //       icon.classList.add('fal');
+    //       icon.classList.add('fa-times');
+    //   })
+
+    image.addEventListener('click', function() {
+        document.body.style.overflow = "hidden";
+        projectImageLightbox.classList.add('project-image-lightbox-show');
+        image.classList.add('full-image');
+        projectImageLightbox.appendChild(div);
+        div.classList.add('image-close-button');
+        div.appendChild(icon);
+        icon.classList.add('fal');
+        icon.classList.add('fa-times');
+        image.style.cursor = "unset";
+    })
+
+    icon.addEventListener('click', function() {
+        document.body.style.overflow = "auto";
+        projectImageLightbox.classList.remove('project-image-lightbox-show');
+        image.classList.remove('full-image');
+        projectImageLightbox.removeChild(div);
+        div.classList.remove('image-close-button');
+        div.removeChild(icon);
+        icon.classList.remove('fal');
+        icon.classList.remove('fa-times');
+        image.style.cursor = "pointer";
+    })
   }
