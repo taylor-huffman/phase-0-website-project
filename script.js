@@ -63,6 +63,8 @@ const viewMoreButtonA = document.querySelector('#view-more-button a');
 const recentProjectsViewMoreSection = document.getElementById('recent-projects-view-more');
 const projectImage = document.getElementsByClassName('recent-project-image');
 const projectImageLightbox = document.getElementById('project-image-lightbox');
+const mouseOverScale = document.getElementsByClassName('mouse-over-scale');
+const sectionImage = document.getElementsByClassName('section-image');
 
 
 hamburgerMenu.addEventListener('click', function() {
@@ -102,6 +104,17 @@ function backToTop() {
         // backToTopButton.style.visibility = "hidden";
         backToTopButton.classList.remove('back-to-top-button-show');
     }
+  }
+
+  for (let i = 0; i < sectionImage.length; i++) {
+      let secImage = sectionImage[i];
+        
+        secImage.addEventListener('mouseenter', function () {
+        secImage.classList.add('mouse-over-scale');
+      })
+        secImage.addEventListener('mouseout', function () {
+        secImage.classList.remove('mouse-over-scale');
+      })
   }
 
   for (let i = 0; i < projectImage.length; i++) {
